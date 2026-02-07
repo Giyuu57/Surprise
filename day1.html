@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose for my bby 🌹</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="day-page">
+    <div class="locked-screen" id="lockedScreen">
+        <div class="locked-content">
+            <div class="lock-icon-big">🔒</div>
+            <h1>This Day is Locked 💖</h1>
+            <p class="locked-message">Come back on <span id="unlockDate">February 7, 2026</span></p>
+            <p class="locked-hint">Baaki ka agle din babyyy🤭, my princess...</p>
+            <button onclick="window.location.href='index.html'" class="back-button">← Back to Calendar</button>
+        </div>
+    </div>
+
+    <div class="unlocked-content hidden" id="unlockedContent">
+        <header class="page-header">
+            <button onclick="window.location.href='index.html'" class="back-button-small">← Back</button>
+            <h1 class="page-title">Rose Day 🌹</h1>
+            <p class="page-date">February 7, 2026</p>
+        </header>
+
+        <div class="container">
+            <div class="content-card rose-day-content">
+                <div class="rose-container" id="roseContainer">
+                    <div class="rose">
+                        <div class="rose-petals">
+                            <div class="petal petal-1"></div>
+                            <div class="petal petal-2"></div>
+                            <div class="petal petal-3"></div>
+                            <div class="petal petal-4"></div>
+                            <div class="petal petal-5"></div>
+                            <div class="rose-center"></div>
+                        </div>
+                        <div class="rose-stem"></div>
+                        <div class="rose-leaf rose-leaf-left"></div>
+                        <div class="rose-leaf rose-leaf-right"></div>
+                    </div>
+                </div>
+
+                <div class="message-box">
+                    <h2>A Rose for My Love 💕</h2>
+                    <p class="love-message">
+                        Just like this rose, my love for you blooms a little more each day.
+                        You bring color to my world, fragrance to my moments, and beauty to my life meri pyaari bbu.
+                    </p>
+                    <p class="love-message">
+                        This week is all about celebrating with uhh and showing you
+                        just how much you mean to me. Every petal hold its meaning and uhh are my home bby...
+                    </p>
+                    <button onclick="collectRose()" id="collectButton" class="collect-button">
+                        Accept This Rose 🌹
+                    </button>
+                    <div class="accepted-message hidden" id="acceptedMessage">
+                        ✨ Rose accepted! Your heart, my Home. 💕
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button onclick="window.location.href='index.html'" class="nav-btn">Home 🏠</button>
+                <button onclick="window.location.href='day2.html'" class="nav-btn" id="nextBtn">Next Day →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-toggle" id="musicToggle" onclick="toggleMusic()">
+            <span class="music-icon playing">🎵</span>
+            <span class="music-icon paused hidden">🔇</span>
+        </button>
+        <span class="music-label">Music</span>
+    </div>
+
+    <audio id="backgroundMusic" loop></audio>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            checkDayUnlock(1, '2026-02-07');
+        });
+
+        function collectRose() {
+            const button = document.getElementById('collectButton');
+            const message = document.getElementById('acceptedMessage');
+            const rose = document.querySelector('.rose');
+            
+            button.classList.add('hidden');
+            message.classList.remove('hidden');
+            rose.style.animation = 'roseFloat 2s ease-in-out';
+            
+            createFloatingHearts(10);
+        }
+    </script>
+</body>
+</html>
