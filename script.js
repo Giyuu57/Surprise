@@ -17,7 +17,7 @@ const CONFIG = {
         7: "2026-02-13",  // Kiss Day
         8: "2026-02-14"   // Valentine's Day
     },
-    testMode: true
+    testMode: false
 };
 
 // ========================================
