@@ -3,209 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day 💖</title>
+    <title>Kissy Day 😽</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="day-page valentine-special">
+<body class="day-page">
     <div class="locked-screen" id="lockedScreen">
         <div class="locked-content">
             <div class="lock-icon-big">🔒</div>
             <h1>This Day is Locked 💖</h1>
-            <p class="locked-message">Come back on <span id="unlockDate">February 14, 2026</span></p>
-            <p class="locked-hint">The grand finale awaits... 💝✨</p>
+            <p class="locked-message">Come back on <span id="unlockDate">February 13, 2026</span></p>
+            <p class="locked-hint">Sweet kisses await... 😽</p>
             <button onclick="window.location.href='index.html'" class="back-button">← Back to Calendar</button>
         </div>
     </div>
 
     <div class="unlocked-content hidden" id="unlockedContent">
-        <header class="page-header valentine-header">
+        <header class="page-header">
             <button onclick="window.location.href='index.html'" class="back-button-small">← Back</button>
-            <h1 class="page-title valentine-title">Happy Valentine's Day! 💖</h1>
-            <p class="page-date">February 14, 2026</p>
+            <h1 class="page-title">Kiss Day 🥰😽</h1>
+            <p class="page-date">February 13, 2026</p>
         </header>
 
         <div class="container">
-            <!-- Opening Message -->
-            <div class="content-card valentine-opening">
-                <div class="opening-animation">
-                    <div class="big-heart">💖</div>
-                    <div class="floating-text">
-                        <h2>To My One and Only</h2>
-                        <p>We made it to the most special day! 🎉</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Journey Recap -->
-            <div class="content-card journey-recap">
-                <h2>Our Week Together 💕</h2>
-                <div class="journey-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-icon">🌹</div>
-                        <p>Day 1: I gave you a rose</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">💍</div>
-                        <p>Day 2: You said yes (again!)</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">🍫</div>
-                        <p>Day 3: Sweet messages shared</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">🧸</div>
-                        <p>Day 4: Virtual hugs exchanged</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">🤝</div>
-                        <p>Day 5: Promises made</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">🤗</div>
-                        <p>Day 6: More hugs & love</p>
-                    </div>
-                    <div class="timeline-item special-timeline">
-                        <div class="timeline-icon">💖</div>
-                        <p>Day 7: Today - Our Valentine's Day!</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Final Love Letter -->
-            <div class="content-card love-letter">
-                <div class="letter-header">
-                    <h2>A Letter to You 💌</h2>
-                </div>
-                <div class="letter-content">
-                    <p class="letter-text">Meri Pyaarii Mukuu,</p>
-                    
-                    <p class="letter-text">
-                        As I sit here trying to put my feelings into words, I realize that
-                        no amount of text, emojis, or animations could truly capture the depth
-                        of what I feel for you. But I'll try anyway, because umm i love my bbyyy so muchh ke kitta bhi likhu its always less...
-                    </p>
-                    
-                    <p class="letter-text">
-                        You are my sunrise and my sunset, my first thought in the morning and
-                        my last at night. You've shown me what it means to be truly loved,
-                        to be seen for who I am, and to be cherished beyond measure.
-                    </p>
-                    
-                    <p class="letter-text">
-                        Every moment with you is a gift. Every laugh we share, every conversation
-                        we have, every silent moment of just being together - they're all treasures
-                        I hold close to my heart. You make the ordinary extraordinary and the
-                        extraordinary unforgettable.
-                    </p>
-                    
-                    <p class="letter-text">
-                        This week has been my small attempt to show you a fraction of what you
-                        mean to me. Seven days of celebrations, but really, I celebrate you
-                        every single day. I celebrate your kindness, your strength, your cuteness and the way you make my world brighter
-                        just by being in it.
-                    </p>
-                    
-                    <p class="letter-text">
-                        Thank you for being you. Thank you for choosing me. Thank you for
-                        every smile, every hug, every "I love you." Thank you for being
-                        my partner, my best friend, my Home, my safe place, my everything🥹🫂...
-                    </p>
-                    
-                    <p class="letter-text">
-                        I promise to love you fiercely, to support you unconditionally,
-                        and to be by your side through every adventure life brings our way.
-                        Today, tomorrow, and all the days after - you're my pyaari si bachii...💕
-                    </p>
-                    
-                    <p class="letter-text">Happy Valentine's Day, my bbyy. Here's to us! 💕</p>
-                    
-                    <p class="letter-signature">
-                        Forever and always yours,<br>
-                        <span class="signature-name">urr pukoo and onlyy urs💖</span>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Interactive Finale -->
-            <div class="content-card finale-interactive">
-                <h2>One Last Surprise! 🎁</h2>
-                <p>Click the heart to reveal your final surprise!</p>
-                
-                <div class="surprise-heart" id="surpriseHeart" onclick="revealSurprise()">
-                    <div class="heart-pulse">💖</div>
+            <div class="content-card kiss-day-content">
+                <div class="kiss-intro">
+                    <h2>Sealed with a Kiss 😽</h2>
+                    <p>Click the lips below to send virtual kisses!</p>
                 </div>
 
-                <div class="final-surprise hidden" id="finalSurprise">
-                    <div class="surprise-content">
-                        <h2>🎉 You Are My Valentine Today and Every Day! 🎉</h2>
-                        <div class="celebration-emoji">
-                            🎊 💕 🎉 💖 ✨ 💗 🌟 💕 🎊
+                <div class="kiss-animation-area">
+                    <div class="big-lips" id="bigLips" onclick="sendKiss()">
+                        <div class="lips-emoji">💋</div>
+                    </div>
+                    <div class="kiss-counter-display">
+                        <h3>Kisses Sent: <span id="kissCount">0</span> 💕</h3>
+                    </div>
+                </div>
+
+                <div class="kiss-types-section">
+                    <h3>Different Types of Kisses 💕</h3>
+                    <div class="kiss-types-grid">
+                        <div class="kiss-type-card" onclick="revealKissType(this, 0)">
+                            <div class="kiss-type-front">
+                                <div class="kiss-emoji">😽</div>
+                                <h4>Click to Reveal</h4>
+                            </div>
+                            <div class="kiss-type-back hidden">
+                                <h4>Forehead Kiss</h4>
+                                <p>For comfort, care, and protection. I'll always be here for you. 💕</p>
+                            </div>
                         </div>
-                        <p class="big-message">
-                            I LOVE YOU MORE THAN WORDS CAN SAY! 💖
+
+                        <div class="kiss-type-card" onclick="revealKissType(this, 1)">
+                            <div class="kiss-type-front">
+                                <div class="kiss-emoji">😚</div>
+                                <h4>Click to Reveal</h4>
+                            </div>
+                            <div class="kiss-type-back hidden">
+                                <h4>Cheek Kiss</h4>
+                                <p>Sweet and affectionate. Every moment with you is precious! 🌸</p>
+                            </div>
+                        </div>
+
+                        <div class="kiss-type-card" onclick="revealKissType(this, 2)">
+                            <div class="kiss-type-front">
+                                <div class="kiss-emoji">😙</div>
+                                <h4>Click to Reveal</h4>
+                            </div>
+                            <div class="kiss-type-back hidden">
+                                <h4>Nose Kiss</h4>
+                                <p>Playful and cute. You make me smile every single day bbyy! 😊</p>
+                            </div>
+                        </div>
+
+                        <div class="kiss-type-card" onclick="revealKissType(this, 3)">
+                            <div class="kiss-type-front">
+                                <div class="kiss-emoji">💋</div>
+                                <h4>Click to Reveal</h4>
+                            </div>
+                            <div class="kiss-type-back hidden">
+                                <h4>Lips Kiss</h4>
+                                <p>Umm... shyy... Passionate and romantic. You're my everything, my bbyy! 💖</p>
+                            </div>
+                        </div>
+
+                        <div class="kiss-type-card" onclick="revealKissType(this, 4)">
+                            <div class="kiss-type-front">
+                                <div class="kiss-emoji">🤗</div>
+                                <h4>Click to Reveal</h4>
+                            </div>
+                            <div class="kiss-type-back hidden">
+                                <h4>Hand Kiss</h4>
+                                <p>Respectful and adoring. You deserve to be cherished princess!💕👑</p>
+                            </div>
+                        </div>
+
+                        <div class="kiss-type-card" onclick="revealKissType(this, 5)">
+                            <div class="kiss-type-front">
+                                <div class="kiss-emoji">😘</div>
+                                <h4>Click to Reveal</h4>
+                            </div>
+                            <div class="kiss-type-back hidden">
+                                <h4>Butterfly Kiss</h4>
+                                <p>Gentle and tender. Your happiness is my happiness bbyy! 🦋</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kiss-message-section">
+                    <h3>Why I Love Kissing You 👀</h3>
+                    <div class="love-note">
+                        <p>
+                            Umm... Every kiss we share is a moment frozen in time, a silent "I love you" 
+                            that speaks louder than words ever could. Umm me shyy shyy🤭 I just want to be with uhh my bby and every kiss feels like coming home💕🥰.
                         </p>
-                        <div class="couple-emoji">
-                            <div class="emoji-person">🐻</div>
-                            <div class="emoji-hearts">💕💗💖💕💗</div>
-                            <div class="emoji-person">🐱</div>
-                        </div>
-                        <p class="final-words">
-                            Thank you for being my Valentine, my love, my everything.
-                            Here's to many more years of love, laughter, and happiness together! 🥰
+                        <p>
+                            From soft, gentle pecks to passionate embraces, each kiss tells a story 
+                            of us. A story of love, trust, and devotion. Umm... I could kiss you 
+                            a thousand times and still want more😭🤭. Uhmm me shyy now... kyaa boluu is din... umm bs ittaaa hii merii bbyyy💕
+                        </p>
+                        <p>
+                            Here's to all the kisses we've shared and all the ones yet to come. 
+                            Tomorrow is Valentine's Day, but today, I'm celebrating the magic 
+                            of your kissy, meri pyaari bbu! 💖
                         </p>
                     </div>
+                </div>
+
+                <button onclick="sendVirtualKiss()" class="special-button" id="virtualKissBtn">
+                    Send a Kiss Back! 😽
+                </button>
+
+                <div class="kiss-received hidden" id="kissReceived">
+                    <div class="kiss-received-animation">
+                        <div class="floating-kisses">
+                            💋 😘 💕 💋 😘 💕
+                        </div>
+                    </div>
+                    <h2>Kiss Received! 🥰😽</h2>
+                    <p>Your kiss just made my heart skip a beat! I love you so much bbu! 💖</p>
                 </div>
             </div>
 
             <div class="navigation-buttons">
                 <button onclick="window.location.href='day6.html'" class="nav-btn">← Previous</button>
-                <button onclick="window.location.href='index.html'" class="nav-btn">🏠 Back Home</button>
+                <button onclick="window.location.href='index.html'" class="nav-btn">Home 🏠</button>
+                <button onclick="window.location.href='day8.html'" class="nav-btn">Next Day →</button>
             </div>
         </div>
     </div>
 
-    <div class="floating-elements" id="floatingElements"></div>
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-toggle" id="musicToggle" onclick="toggleMusic()">
+            <span class="music-icon playing">🎵</span>
+            <span class="music-icon paused hidden">🔇</span>
+        </button>
+        <span class="music-label">Music</span>
+    </div>
+
+    <audio id="backgroundMusic" loop></audio>
 
     <script src="script.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            checkDayUnlock(7, '2026-02-14');
-            
-            // Auto-create ambient hearts
-            setInterval(() => {
-                if (!document.getElementById('lockedScreen').classList.contains('hidden')) {
-                    return;
-                }
-                createFloatingHearts(2);
-            }, 2000);
+            checkDayUnlock(7, '2026-02-13');
         });
 
-        function revealSurprise() {
-            const heart = document.getElementById('surpriseHeart');
-            const surprise = document.getElementById('finalSurprise');
+        let kissCounter = 0;
+        let revealedKissTypes = 0;
+
+        function sendKiss() {
+            const lips = document.getElementById('bigLips');
+            const countSpan = document.getElementById('kissCount');
             
-            heart.style.transform = 'scale(0)';
-            heart.style.opacity = '0';
+            kissCounter++;
+            countSpan.textContent = kissCounter;
+            
+            lips.classList.add('kissing');
+            createFloatingHearts(5);
+            
+            createKissMarks(3);
             
             setTimeout(() => {
-                heart.classList.add('hidden');
-                surprise.classList.remove('hidden');
-                
-                // Massive celebration
-                createFloatingHearts(50);
-                createConfetti();
-                
-                // Continue creating hearts for effect
-                let heartCount = 0;
-                const heartInterval = setInterval(() => {
-                    createFloatingHearts(5);
-                    heartCount++;
-                    if (heartCount > 10) {
-                        clearInterval(heartInterval);
-                    }
-                }, 500);
+                lips.classList.remove('kissing');
             }, 500);
         }
+
+        function createKissMarks(count) {
+            for (let i = 0; i < count; i++) {
+                const kiss = document.createElement('div');
+                kiss.className = 'flying-kiss';
+                kiss.textContent = '😽';
+                kiss.style.left = Math.random() * 100 + '%';
+                kiss.style.animationDelay = (i * 0.2) + 's';
+                document.body.appendChild(kiss);
+                
+                setTimeout(() => kiss.remove(), 3000);
+            }
+        }
+
+        function revealKissType(card, index) {
+            const front = card.querySelector('.kiss-type-front');
+            const back = card.querySelector('.kiss-type-back');
+            
+            if (back.classList.contains('hidden')) {
+                front.classList.add('hidden');
+                back.classList.remove('hidden');
+                card.classList.add('revealed');
+                createFloatingHearts(3);
+                revealedKissTypes++;
+                
+                if (revealedKissTypes === 6) {
+                    setTimeout(() => {
+                        createFloatingHearts(15);
+                    }, 500);
+                }
+            }
+        }
+
+        function sendVirtualKiss() {
+            const button = document.getElementById('virtualKissBtn');
+            const received = document.getElementById('kissReceived');
+            
+            button.classList.add('hidden');
+            received.classList.remove('hidden');
+            
+            createFloatingHearts(30);
+            createConfetti();
+        }
     </script>
+
+    <style>
+        .kiss-animation-area {
+            text-align: center;
+            margin: var(--space-xl) 0;
+        }
+
+        .big-lips {
+            font-size: 8rem;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s ease;
+            animation: kissFloat 2s ease-in-out infinite;
+        }
+
+        .big-lips:hover {
+            transform: scale(1.1);
+        }
+
+        .big-lips.kissing {
+            animation: kissPop 0.5s ease-out;
+        }
+
+        @keyframes kissFloat {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        @keyframes kissPop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3) rotate(10deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        .kiss-counter-display {
+            margin-top: var(--space-lg);
+        }
+
+        .kiss-counter-display h3 {
+            font-family: var(--font-display);
+            color: var(--pink-accent);
+            font-size: 1.5rem;
+        }
+
+        .kiss-types-section {
+            margin: var(--space-xl) 0;
+        }
+
+        .kiss-types-section h3 {
+            font-family: var(--font-display);
+            color: var(--pink-accent);
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            font-size: 1.8rem;
+        }
+
+        .kiss-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .kiss-type-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: 0 4px 12px var(--shadow);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .kiss-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-hover);
+        }
+
+        .kiss-type-card.revealed {
+            background: linear-gradient(135deg, var(--pink-light) 0%, var(--cream) 100%);
+        }
+
+        .kiss-emoji {
+            font-size: 3rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .kiss-type-front h4,
+        .kiss-type-back h4 {
+            font-family: var(--font-display);
+            color: var(--pink-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .kiss-type-back p {
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .kiss-message-section {
+            margin: var(--space-xl) 0;
+        }
+
+        .kiss-message-section h3 {
+            font-family: var(--font-display);
+            color: var(--pink-accent);
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            font-size: 1.8rem;
+        }
+
+        .kiss-received {
+            text-align: center;
+            padding: var(--space-xl);
+            background: linear-gradient(135deg, var(--pink-light) 0%, var(--cream) 100%);
+            border-radius: var(--radius-lg);
+            margin-top: var(--space-lg);
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        .kiss-received-animation {
+            margin: var(--space-lg) 0;
+        }
+
+        .floating-kisses {
+            font-size: 2.5rem;
+            animation: spin360 2s ease-in-out infinite;
+        }
+
+        .flying-kiss {
+            position: fixed;
+            font-size: 2rem;
+            animation: flyKiss 3s ease-out forwards;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        @keyframes flyKiss {
+            0% {
+                bottom: 50%;
+                opacity: 1;
+                transform: translateX(0) rotate(0deg);
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+                transform: translateX(50px) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .big-lips {
+                font-size: 6rem;
+            }
+            
+            .kiss-types-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .big-lips {
+                font-size: 5rem;
+            }
+            
+            .kiss-types-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </body>
 </html>
