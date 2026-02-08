@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Valentine Week 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Optional Password Gate -->
+    <div id="passwordGate" class="password-gate">
+        <div class="password-card">
+            <div class="bear-couple">
+                <div class="bear bear-left">🐻</div>
+                <div class="heart-between">💗</div>
+                <div class="bear bear-right">🐻</div>
+            </div>
+            <h1>Our Secret Valentine Week</h1>
+            <p>Enter your special nickname, my love</p>
+            <input type="text" id="passwordInput" placeholder="Your nickname..." autocomplete="off">
+            <button onclick="checkPassword()">Enter Our World 💖</button>
+            <div id="passwordError" class="password-error"></div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="mainApp" class="main-app hidden">
+        <header class="header">
+            <h1 class="main-title">Our Valentine Week Journey 💕</h1>
+            <p class="subtitle">7 Days of Love, Just for Us</p>
+        </header>
+
+        <div class="container">
+            <div class="days-grid">
+                <!-- Day 1: Rose Day -->
+                <div class="day-card" data-day="1" onclick="goToDay(1)">
+                    <div class="day-icon">🌹</div>
+                    <h2>Rose Day</h2>
+                    <p class="day-date">February 7</p>
+                    <div class="lock-status" id="lock-1">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+
+                <!-- Day 2: Propose Day -->
+                <div class="day-card" data-day="2" onclick="goToDay(2)">
+                    <div class="day-icon">💍</div>
+                    <h2>Propose Day</h2>
+                    <p class="day-date">February 8</p>
+                    <div class="lock-status" id="lock-2">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+
+                <!-- Day 3: Chocolate Day -->
+                <div class="day-card" data-day="3" onclick="goToDay(3)">
+                    <div class="day-icon">🍫</div>
+                    <h2>Chocolate Day</h2>
+                    <p class="day-date">February 9</p>
+                    <div class="lock-status" id="lock-3">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+
+                <!-- Day 4: Teddy Day -->
+                <div class="day-card" data-day="4" onclick="goToDay(4)">
+                    <div class="day-icon">🧸</div>
+                    <h2>Teddy Day</h2>
+                    <p class="day-date">February 10</p>
+                    <div class="lock-status" id="lock-4">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+
+                <!-- Day 5: Promise Day -->
+                <div class="day-card" data-day="5" onclick="goToDay(5)">
+                    <div class="day-icon">🤝</div>
+                    <h2>Promise Day</h2>
+                    <p class="day-date">February 11</p>
+                    <div class="lock-status" id="lock-5">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+
+                <!-- Day 6: Hug Day -->
+                <div class="day-card" data-day="6" onclick="goToDay(6)">
+                    <div class="day-icon">🤗</div>
+                    <h2>Hug Day</h2>
+                    <p class="day-date">February 12</p>
+                    <div class="lock-status" id="lock-6">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+
+                <!-- Day 7: Kiss Day -->
+                <div class="day-card" data-day="7" onclick="goToDay(7)">
+                    <div class="day-icon">😘</div>
+                    <h2>Kiss Day</h2>
+                    <p class="day-date">February 13</p>
+                    <div class="lock-status" id="lock-7">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+
+                <!-- Day 8: Valentine's Day -->
+                <div class="day-card special" data-day="8" onclick="goToDay(8)">
+                    <div class="day-icon">💖</div>
+                    <h2>Valentine's Day</h2>
+                    <p class="day-date">February 14</p>
+                    <div class="lock-status" id="lock-8">
+                        <span class="lock-icon">🔒</span>
+                        <span class="lock-text">Locked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Made with endless love 💕 Just for you bbyy</p>
+        </footer>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-toggle" id="musicToggle" onclick="toggleMusic()">
+            <span class="music-icon playing">🎵</span>
+            <span class="music-icon paused hidden">🔇</span>
+        </button>
+        <span class="music-label">Music</span>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="backgroundMusic" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
