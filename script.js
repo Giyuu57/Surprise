@@ -8,19 +8,20 @@
 const CONFIG = {
     password: "Mukuu",
     unlockDates: {
-        1: "2026-02-07",
-        2: "2026-02-08",
-        3: "2026-02-09",
-        4: "2026-02-10",
-        5: "2026-02-11",
-        6: "2026-02-12",
-        7: "2026-02-14"
+        1: "2026-02-07",  // Rose Day
+        2: "2026-02-08",  // Propose Day
+        3: "2026-02-09",  // Chocolate Day
+        4: "2026-02-10",  // Teddy Day
+        5: "2026-02-11",  // Promise Day
+        6: "2026-02-12",  // Hug Day
+        7: "2026-02-13",  // Kiss Day
+        8: "2026-02-14"   // Valentine's Day
     },
-    testMode: false
+    testMode: true
 };
 
 // ========================================
-// MUSIC PLAYER
+// MUSIC PLAYER (CONTINUOUS ACROSS PAGES)
 // ========================================
 let musicAudio = null;
 let isMusicPlaying = false;
@@ -30,10 +31,29 @@ function initMusic() {
     if (!musicAudio) return;
     
     // Set the music source to xyz.mp3
-    // IMPORTANT: Place your romantic music file named "xyz.mp3" in the same folder
     musicAudio.src = 'xyz.mp3';
-    musicAudio.volume = 0.3; // 30% volume - gentle background music
+    musicAudio.volume = 0.3;
     musicAudio.loop = true;
+    
+    // Restore playback position from localStorage
+    const savedTime = localStorage.getItem('valentine_music_time');
+    const savedPlaying = localStorage.getItem('valentine_music_playing');
+    
+    if (savedTime) {
+        musicAudio.currentTime = parseFloat(savedTime);
+    }
+    
+    // Auto-resume if music was playing
+    if (savedPlaying === 'true') {
+        playMusic();
+    }
+    
+    // Save playback position every second
+    setInterval(() => {
+        if (musicAudio && !musicAudio.paused) {
+            localStorage.setItem('valentine_music_time', musicAudio.currentTime.toString());
+        }
+    }, 1000);
 }
 
 function toggleMusic() {
@@ -59,6 +79,7 @@ function playMusic() {
     
     musicAudio.play().then(() => {
         isMusicPlaying = true;
+        localStorage.setItem('valentine_music_playing', 'true');
         if (playing) playing.classList.remove('hidden');
         if (paused) paused.classList.add('hidden');
         if (toggle) toggle.classList.add('playing-animation');
@@ -77,6 +98,7 @@ function pauseMusic() {
     
     musicAudio.pause();
     isMusicPlaying = false;
+    localStorage.setItem('valentine_music_playing', 'false');
     if (playing) playing.classList.add('hidden');
     if (paused) paused.classList.remove('hidden');
     if (toggle) toggle.classList.remove('playing-animation');
@@ -87,12 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initMusic();
 });
 
-// Auto-play music on first user interaction
+// Auto-play music on first user interaction (only if not played before)
 let hasInteracted = false;
 document.addEventListener('click', () => {
     if (!hasInteracted) {
         hasInteracted = true;
-        playMusic();
+        const hasPlayedBefore = localStorage.getItem('valentine_music_playing');
+        if (!hasPlayedBefore) {
+            playMusic();
+        }
     }
 }, { once: true });
 
@@ -151,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // APP INITIALIZATION
 // ========================================
 function initializeApp() {
-    for (let day = 1; day <= 7; day++) {
+    for (let day = 1; day <= 8; day++) {
         updateDayStatus(day);
     }
     
